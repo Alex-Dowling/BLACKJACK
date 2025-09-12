@@ -1,0 +1,26 @@
+#include <iostream>
+#include <vector>
+#include <cstdlib>
+#include <ctime>
+#include <algorithm>
+#include <cmath>
+
+using namespace std;
+
+void Startscreen(double& start);
+
+int main()
+{
+    
+    Startscreen();
+}
+
+void Startscreen()
+{
+    
+    cout<<"   Welcome to  "<<endl;
+    cout<<"   Black Jack  "<<endl<<endl<<endl;
+    
+    cout<<"Press 1 to Play, 2 for Not play"<<endl;
+
+}
