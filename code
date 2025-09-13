@@ -8,19 +8,66 @@
 using namespace std;
 
 void Startscreen(double& start);
+void Rules();
 
 int main()
-{
-    
-    Startscreen();
+{    
+    double start;
+    Startscreen(start);
 }
 
-void Startscreen()
+void Startscreen(double& start)
 {
     
     cout<<"   Welcome to  "<<endl;
     cout<<"   Black Jack  "<<endl<<endl<<endl;
     
-    cout<<"Press 1 to Play, 2 for Not play"<<endl;
+    cout<<"Press 1 to Play, 2 to not play, and 3 for Rules"<<endl;
+    cin>>start;
+    
+    while (true)
+    {
+        if(start == 1)
+        {
+            break;
+        }
+        
+        if(start == 2)
+        {
+            break;
+        }
+        
+        if(start == 3)
+        {
+            Rules();
+            cin.clear();
+            cout<<"Press 1 to Play, 2 to not play"<<endl;
+            cin>>start;
+            
+        }
+        
+        else
+        {
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cout<<"Please press 1, 2, or 3"<<endl;
+            cin>>start;
+        }
+    }
 
+}
+
+void Rules()
+{
+    system("cls");
+    cout<<"You and the dealer are dealt 2 cards. Your goal is to get a higher value hand then the dealer."<<endl;
+    cout<<"Number cards being worth their number, face cards being worth 10, and aces being worth 11 or 1."<<endl;
+    cout<<"However, if you or the dealer go over 21 you bust which means the other party wins."<<endl;
+    cout<<"If you have a hand worth 21 before hitting such as Ace, King or Ace, 10 you get Black Jack,"<<endl;
+    cout<<"which means you instantly win unless the dealer also has Black Jack, you also get paid your bet paid 3:2."<<endl;
+    cout<<"There is also doubling down which you double your bet and get one more card"<<endl;
+    cout<<"Spliting is also an option but only when you have two of the same card such as 8, 8 and Ace, Ace"<<endl;
+    cout<<"When you split you get two hands with both starting with the cards you had"<<endl;
+    cout<<"When you split you also double your bet but you have half for both hands"<<endl;
+    
 }
