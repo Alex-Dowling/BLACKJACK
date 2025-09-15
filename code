@@ -17,13 +17,15 @@ int main()
 
     if (start == 1)
     {
-        
+        cout<<"test1"<<endl;
     }
 
     if (start == 2)
     {
-        
+        cout<<"test2"<<endl;
     }
+
+    return 0;
 }
 
 void Startscreen(double& start)
