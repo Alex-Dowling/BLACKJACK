@@ -14,6 +14,16 @@ int main()
 {    
     double start;
     Startscreen(start);
+
+    if (start == 1)
+    {
+        
+    }
+
+    if (start == 2)
+    {
+        
+    }
 }
 
 void Startscreen(double& start)
