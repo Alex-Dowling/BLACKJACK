@@ -9,6 +9,7 @@ using namespace std;
 
 void Startscreen(double& start);
 void Rules();
+void noplay();
 
 int main()
 {    
@@ -22,7 +23,7 @@ int main()
 
     if (start == 2)
     {
-        cout<<"test2"<<endl;
+        noplay();
     }
 
     return 0;
@@ -83,4 +84,10 @@ void Rules()
     cout<<"When you split you also double your bet but you have half for both hands"<<endl;
     system("cls");
     
+}
+
+void noplay()
+{
+    cout<<"Thanks for not playing"<<endl;
+    cout<<"      Black Jack      "<<endl;
 }
