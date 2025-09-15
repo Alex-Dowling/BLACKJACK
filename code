@@ -9,6 +9,7 @@ using namespace std;
 void Startscreen(double& start);
 void Rules();
 void noplay();
+void game();
 
 int main()
 {    
@@ -17,7 +18,7 @@ int main()
 
     if (start == 1)
     {
-        cout<<"test1"<<endl;
+        game();
     }
 
     if (start == 2)
@@ -89,4 +90,9 @@ void noplay()
 {
     cout<<"Thanks for not playing"<<endl;
     cout<<"      Black Jack      "<<endl;
+}
+
+void game()
+{
+    cout<<"test"<<endl;
 }
