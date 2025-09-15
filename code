@@ -69,5 +69,6 @@ void Rules()
     cout<<"Spliting is also an option but only when you have two of the same card such as 8, 8 and Ace, Ace"<<endl;
     cout<<"When you split you get two hands with both starting with the cards you had"<<endl;
     cout<<"When you split you also double your bet but you have half for both hands"<<endl;
+    system("cls");
     
 }
