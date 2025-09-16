@@ -9,23 +9,28 @@ using namespace std;
 void Startscreen(double& start);
 void Rules();
 void noplay();
-void game();
+void Deck(vector<int>& deck);
+void shuffleDeck(vector<int>& deck);
+void game(vector<int>& deck);
 
 int main()
 {    
     double start;
+    vector<int> deck;
+
     Startscreen(start);
 
     if (start == 1)
     {
-        game();
+        Deck(deck);
+        shuffleDeck(deck);
+        game(deck);
     }
 
     if (start == 2)
     {
         noplay();
     }
-
     return 0;
 }
 
@@ -92,7 +97,30 @@ void noplay()
     cout<<"      Black Jack      "<<endl;
 }
 
-void game()
+void Deck(vector<int>& deck)
+{
+
+    for (int i = 2; i <= 14; ++i)
+    {
+        for (int j = 0; j < 16; ++j)
+        {
+            deck.push_back(i);
+        }
+    }
+    return;
+}
+
+void shuffleDeck(vector<int>& deck)
+{
+    srand(time(0));
+    for (int i = deck.size() - 1; i > 0; --i)
+    {
+        int j = rand() % (i + 1);
+        swap(deck[i], deck[j]);
+    }
+}
+
+void Deck(vector<int>& deck)
 {
     cout<<"test"<<endl;
 }
